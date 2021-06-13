@@ -54,8 +54,9 @@ public class GpsinventoryController {
 		gpsinventory.setdriverName(gpsinventoryDetails.getdriverName());
 		gpsinventory.setvehicleNumber(gpsinventoryDetails.getvehicleNumber());
 		gpsinventory.setvehicleCategory(gpsinventoryDetails.getvehicleCategory());
+	        gpsinventory.setdistanceTotal(gpsinventoryDetails.getdistanceTotal());
 		gpsinventory.setfuelTotal(gpsinventoryDetails.getfuelTotal());
-        gpsinventory.setlat(gpsinventoryDetails.getlat());
+	        gpsinventory.setlat(gpsinventoryDetails.getlat());
 	    gpsinventory.setlon(gpsinventoryDetails.getlon());
         final Gpsinventory updatedGpsinventory = gpsinventoryRepository.save(gpsinventory);
         return ResponseEntity.ok(updatedGpsinventory);
