@@ -19,6 +19,7 @@ public class Gpsinventory {
 	private String driverName;
 	private String vehicleNumber;
 	private String vehicleCategory;
+	private double distanceTotal;
 	private double fuelTotal;
 	private double lat;
 	private double lon;
@@ -26,7 +27,7 @@ public class Gpsinventory {
   
     }
  
-    public Gpsinventory(String gpsterminalId, String customerId, String customerName, String driverId, String driverName, String vehicleNumber, String vehicleCategory, double fuelTotal, double lat, double lon) {
+    public Gpsinventory(String gpsterminalId, String customerId, String customerName, String driverId, String driverName, String vehicleNumber, String vehicleCategory, double distanceTotal, double fuelTotal, double lat, double lon) {
          this.gpsterminalId = gpsterminalId;
          this.customerId = customerId;
          this.customerName = customerName;
@@ -34,6 +35,7 @@ public class Gpsinventory {
 		 this.driverName = driverName;
 		 this.vehicleNumber = vehicleNumber;
 		 this.vehicleCategory = vehicleCategory;
+	         this.distanceTotal = distanceTotal;
 		 this.fuelTotal = fuelTotal;
 		 this.lat = lat;
 		 this.lon = lon;
@@ -104,6 +106,14 @@ public class Gpsinventory {
         this.vehicleCategory = vehicleCategory;
     }
 
+    @Column(name = "distanceTotal", nullable = true)
+    public double getdistanceTotal() {
+        return distanceTotal;
+    }
+    public void setdistanceTotal(double distanceTotal) {
+        this.distanceTotal = distanceTotal;
+    }
+	
     @Column(name = "fuelTotal", nullable = true)
     public double getfuelTotal() {
         return fuelTotal;
