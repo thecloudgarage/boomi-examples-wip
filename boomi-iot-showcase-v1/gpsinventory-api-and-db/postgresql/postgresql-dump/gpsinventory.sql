@@ -20,9 +20,9 @@ CREATE TABLE "public"."gpsinventory" (
 ) WITH (oids = false);
 
 INSERT INTO "gpsinventory" ("id", "customer_id", "customer_name", "gpsterminal_id", "driver_id", "driver_name", "vehicle_number", "vehicle_category", "fuel_total", "lat", "lon") VALUES
-(1,	'1',	'ABC001 limited',	'gps-01-001', dr-1111-1, ritesh kumar, dl01-mk-1111, haulage, 0, 0, 0),
-(2,	'2',	'ABC002 limited',	'gps-01-002', dr-2222-1, shyam sunder, mh-ab-1111, haulage, 0, 0, 0),
-(3,	'3',	'ABC003 limited',	'gps-01-003', dr-3333-1, murugesh kumar, ka-xy-1111, haulage, 0, 0, 0),
-(4,	'4',	'ABC004 limited',	'gps-01-004', dr-4444-1, kuttu swamy, tn-ba-1111, haulage, 0, 0, 0);
+(1,	'1',	'ABC001 limited',	'gps-01-001', 'dr-1111-1', 'ritesh kumar', 'dl01-mk-1111', 'haulage', 0, 0, 0),
+(2,	'2',	'ABC002 limited',	'gps-01-002', 'dr-2222-1', 'shyam sunder', 'mh-ab-1111', 'tipper', 0, 0, 0),
+(3,	'3',	'ABC003 limited',	'gps-01-003', 'dr-3333-1', 'murugesh kumar', 'ka-xy-1111', 'trailer', 0, 0, 0),
+(4,	'4',	'ABC004 limited',	'gps-01-004', 'dr-4444-1', 'kuttu swamy', 'tn-ba-1111', 'delivery', 0, 0, 0);
 
 -- 2021-06-08 07:01:59.003644+00
