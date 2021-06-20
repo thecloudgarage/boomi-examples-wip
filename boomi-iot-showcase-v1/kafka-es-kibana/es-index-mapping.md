@@ -1,8 +1,10 @@
+Kibana > dev tools > paste the below to create an index with the specified mapping
+You might receive no request in error message initially. You might wait for some time and repeat the execution of the same.
+This version of mapping template avoids any type.name post 7.13 ElasticSearch. But while creating the ES connnector in CP KAFKA, we need to mention "_doc" as type.name
 ```
-PUT /gps?include_type_name=true
+PUT /gps
 {
   "mappings": {
-    "_doc": {
       "properties": {
         "customerId": {
           "type": "long"
@@ -91,5 +93,3 @@ PUT /gps?include_type_name=true
       }
     }
   }
-}
-```
