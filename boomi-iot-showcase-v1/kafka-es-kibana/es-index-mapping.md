@@ -1,5 +1,5 @@
 ```
-PUT gps?include_type_name=true
+PUT /gps?include_type_name=true
 {
   "mappings": {
     "_doc": {
