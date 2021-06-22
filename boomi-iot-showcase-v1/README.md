@@ -2,7 +2,7 @@
 
 ## Objective
 
-Build a simulator and processing engine on top of Boomi integration that can serve as a tool-chain for various IoT use cases. 
+Build an end-to-end real-time data pipeline on top of Boomi integration that can serve as a tool-chain for various IoT use cases. 
 
 > special thanks to Chris Cappetta https://github.com/ccappetta and Premjit Mishra from Boomi who have always helped get the better of the platform!
 
