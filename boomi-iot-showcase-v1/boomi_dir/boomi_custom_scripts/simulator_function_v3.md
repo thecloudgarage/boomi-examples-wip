@@ -1,3 +1,6 @@
+Copy and paste the below groovy code in the simulator process for the custom scripting function inside of the map.
+
+```
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -10,19 +13,34 @@ import java.text.SimpleDateFormat
 import java.io.InputStream;
 import groovy.time.*;
 
+// gpsterminalidinput
+// latitudeinput
+// longitudeinput
+// temperatureinput
+// fuelinput
+
+// gpsterminalidoutput
+// latitudeoutput
+// longitudeoutput
+// distancediff
+// temperatureoutput
+// speed
+// fueldiff
+// fueltotal
+
 int intValue = 0;
 for ( int i = 0; i <= intValue; i++) {
 
 // Set initial time & Induce delay for every loop
-sleepTimer = 20000;
+sleepTimer = 10000;
 Thread.sleep(sleepTimer);
 
 // Relay the GPS terminal id as-is
 gpsterminalidoutput = gpsterminalidinput;
 
-// Generate the next latitude longitude for the loop with randomness. Iterated the divisibilty to observe near real scenarios.
-latitudeoutput = latitudeinput + (Math.random() / 250);
-longitudeoutput = longitudeinput + (Math.random() / 250);
+// Generate the next latitude longitude for the loop
+latitudeoutput = latitudeinput + (Math.random() / 500);
+longitudeoutput = longitudeinput + (Math.random() / 500);
 
 // Generate random incremental or decremental temperature values
 temperatureoutput = temperatureinput + Math.random() -  Math.random();
@@ -53,10 +71,10 @@ double r = 6371;
 // calculate the incremental distance travelled
 distancediff = c * r;
 
-// Finally calculate speed. Validated through iterations., looks good for a near-real scenario.
+// Finally calculate speed
 speedoutput = distancediff / timediffHours;
 
-// Calculate total distance and incremental distance travelled per loop
+// Calculate total distance travelled
 // At initial distancetotaloutput is set to distancediff
 if (distancetotalinput != null) {
 distancetotaloutput = distancetotalinput +  distancediff;
@@ -92,8 +110,9 @@ else {
 fueltotaloutput = fueldiffoutput;
 };
 
-// Set incremental timestamp. Note the map date-time format should align with the one mentioned here.
+// Set incremental timestamp
 Calendar cal = Calendar.getInstance();
 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 timestampoutput = dateFormat.format(cal.getTime());
 }
+```
