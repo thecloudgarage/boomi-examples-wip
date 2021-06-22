@@ -83,8 +83,7 @@ Create a new folder in atomsphere build service which we will use to store all o
 ## MQTT simulator process
 
 This process will serve as a simulator to generate mock data for IoT sensor. The output of this process will be sent to a MQTT broker via a connector. This how our Boomi simulator process will look like at the end.
-
-![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
+![image](https://user-images.githubusercontent.com/39495790/122855858-7b475f80-d333-11eb-9efc-7ba2bb0bb219.png)
 
 ## Data Processor process
 
