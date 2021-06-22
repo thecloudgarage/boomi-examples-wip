@@ -80,11 +80,19 @@ Observe that we are changing the **heap size to 2G of memory**. You can skip it 
 
 Create a new folder in atomsphere build service which we will use to store all our processes.
 
-## Building our MQTT simulator process
+## MQTT simulator process
 
 This process will serve as a simulator to generate mock data for IoT sensor. The output of this process will be sent to a MQTT broker via a connector. This how our Boomi simulator process will look like at the end.
 
 ![image](https://user-images.githubusercontent.com/39495790/120266415-77d63080-c2bf-11eb-8a91-67b571c222f9.png)
+
+## Data Processor process
+
+This process serves multiple objectives. It subscribes to the MQTT broker and listen for all GPS data published by the simulator processor. Further on, it performs a HTTP lookup to a Spring Boot API, wherein the intent is that there are parts of information such as customer ID, customer Name, driver details, etc. stored in a separate database. This data is accessible via a Spring Boot API. Herein, the HTTP lookup data is then mashed up with incoming MQTT messages for each GPS ID to perform a typical use-case of **data enrichment**. Lastly, the overall data is profiled in a JSON structure that will be send to KAFKA and sequentially to an update step that takes MQTT based lat/lon/fuel/distance data points and updates back the lookup database via the same Spring Boot API.
+
+![image](https://user-images.githubusercontent.com/39495790/122855343-bc8b3f80-d332-11eb-9ad1-9a8d04a2e372.png)
+
+
 
 Create a new process component. We will use this process to simulate an iterative data-set for IOT data
 
