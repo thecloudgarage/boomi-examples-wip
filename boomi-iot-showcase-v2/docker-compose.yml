@@ -232,3 +232,22 @@ services:
       - "32003:8080"
     links:
       - gpsinventory
+
+# NOTE: In order to save on licenses in Boomi training account all http client connections are set to be routed via NGINX reverse proxy
+# This way we can make the HTTP client connection connect to the same URL connection, i.e. this reverse proxy
+# And based upon resource path, we can then set the reverse proxy to forward to specific targets
+
+  nginx-reverse-proxy:
+    image: nginx-reverse-proxy:latest
+    build:
+      context: ./nginx-reverse-proxy/
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: on-failure
+    depends_on:
+      - gpsinventory-api
+      - elasticsearch
+    links:
+      - gpsinventory-api
+      - elasticsearch
