@@ -33,7 +33,7 @@ This helped me further as my target processes that need to be tested via simulat
 ![image](https://user-images.githubusercontent.com/39495790/122979882-b12d2800-d3b5-11eb-9042-57aadc310783.png)
 
 ## Prequisities
-* Boomi training account at minimum (all processes have been designed to keep within the bounds of training account license restrictions)
+* Boomi training account at minimum (all processes have been designed to operate within the bounds of training account license restrictions)
 * Basic working knowledge of Boomi Integration
 * Docker host preferably with 4G or 8G RAM
 * **Optional:** Familiarity with MQTT, Kafka, ElasticSearch, Kibana, Docker
