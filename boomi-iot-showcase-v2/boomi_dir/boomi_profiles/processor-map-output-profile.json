@@ -1,0 +1,18 @@
+{
+  "gpsterminalid": "gps-001-0001",
+  "customerId": "1",
+  "customerName": "ABC-1 Limited",
+  "driverId": "dr-1111-1",
+  "driverName": "ritesh kumar",
+  "vehicleNumber": "dl01-mk-1111",
+  "vehicleCategory": "haulage",
+  "location": { "lon": 19.079070, "lat": 72.907976 },
+  "temperature": 93.00,
+  "speed": 35.00,
+  "fueltotal": 1.00,
+  "distancetotal": 1.00,
+  "fueldiff": 1.00,
+  "distancediff": 1.00,
+  "fuelefficiency": 1.00,
+  "timestamp": "2021-06-07T06:23:37.825Z"
+}

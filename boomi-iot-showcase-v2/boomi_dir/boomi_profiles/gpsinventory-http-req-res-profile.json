@@ -1,0 +1,13 @@
+{
+    "gpsterminalId": "gps-01-001",
+    "customerId": "1",
+    "customerName": "ABC001 limited",
+    "driverId": "dr-1111-1",
+    "driverName": "ritesh kumar",
+    "vehicleNumber": "dl01-mk-1111",
+    "vehicleCategory": "haulage",
+    "distanceTotal": 0.0,
+    "fuelTotal": 0.0,
+    "lat": 0.0,
+    "lon": 0.0
+}
