@@ -232,3 +232,6 @@ services:
       - "32003:8080"
     links:
       - gpsinventory
+
+# NOTE: This version uses confluent kafka's elasticsearch connector and no use of nginx reverse proxy
+# It has been fully validated and the documentation is up-to-date
