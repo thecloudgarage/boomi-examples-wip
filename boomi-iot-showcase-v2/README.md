@@ -1,7 +1,7 @@
 # Real-time IoT data pipelines using Boomi, Docker and multiple data services.
  ![Build Status](https://travis-ci.org/Raouf25/Spring-Boot-efficient-search-API.svg?branch=master)
  ![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Raouf25_Spring-Boot-efficient-search-API&metric=alert_status)
- ![BCH compliance](https://bettercodehub.com/edge/badge/Raouf25/Spring-Boot-efficient-search-API?branch=master)](https://bettercodehub.com/)
+ ![BCH compliance](https://bettercodehub.com/edge/badge/Raouf25/Spring-Boot-efficient-search-API?branch=master)
 
 ## Objective
 
