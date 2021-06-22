@@ -74,6 +74,7 @@ At the end of the exercise of creating a real-time data pipeline we will be able
 ![image](https://user-images.githubusercontent.com/39495790/122866472-9e7b0a80-d345-11eb-9970-ea0d70c39aa1.png)
 
 <br />
+
 Kibana also provides for **cool Machine Learning models** which you can explore!
 
 ![image](https://user-images.githubusercontent.com/39495790/122866642-ec900e00-d345-11eb-9c25-5fc1a4739df8.png)
