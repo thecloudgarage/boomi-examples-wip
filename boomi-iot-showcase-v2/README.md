@@ -40,7 +40,7 @@ This helped me further as my target processes that need to be tested via simulat
 
 This process will serve as a simulator to generate mock data for IoT sensor. The process is fine tuned to generate randomness and close-to-real life emulation of incremental latitude, longitude, speeds, distances, fuel, temperature, etc. The output of this process will be sent to a MQTT broker via a connector. This how our Boomi simulator process will look like at the end.
 
-![image](https://user-images.githubusercontent.com/39495790/122855858-7b475f80-d333-11eb-9efc-7ba2bb0bb219.png)
+![image](https://user-images.githubusercontent.com/39495790/122972243-8c34b700-d3ad-11eb-99ad-3b9807dd024e.png)
 
 ## Process-2: IoT processor
 
