@@ -1,7 +1,8 @@
-# IoT simulation using Boomi
+# End-to-End IoT simulation and processing using Boomi, Docker and multiple data services.
 
 ## Objective
-Build a process on top of Boomi integration that can serve as a simulator and testing tool for various purposes (mqtt/database/kafka/http, etc.)
+
+Build a simulator and processing engine on top of Boomi integration that can serve as a tool-chain for various IoT use cases. 
 
 > special thanks to Chris Cappetta https://github.com/ccappetta and Premjit Mishra from Boomi who have always helped get the better of the platform!
 
@@ -30,12 +31,7 @@ This helped me further as my target processes that need to be tested via simulat
 ## Prequisities
 * Basic working knowledge of Boomi Integration
 * Docker host preferably with 4G or 8G RAM
-
-## Creating the environment and installation token
-
-The below steps outline creation of an environment and a token that will be used to install our atom on docker. Ensure that you copy your environment ID and the token in notepad for further use
-
-![image](https://user-images.githubusercontent.com/39495790/120333370-3ff5da00-c30d-11eb-8b5c-e964e786edae.png)
+* **Optional:** Familiarity with MQTT, Kafka, ElasticSearch, Kibana, Docker
 
 ## MQTT simulator process
 
@@ -48,11 +44,4 @@ This process will serve as a simulator to generate mock data for IoT sensor. The
 This process serves multiple objectives. It subscribes to the MQTT broker and listen for all GPS data published by the simulator processor. Further on, it performs a HTTP lookup to a Spring Boot API, wherein the intent is that there are parts of information such as customer ID, customer Name, driver details, etc. stored in a separate database. This data is accessible via a Spring Boot API. Herein, the HTTP lookup data is then mashed up with incoming MQTT messages for each GPS ID to perform a typical use-case of **data enrichment**. Lastly, the overall data is profiled in a JSON structure that will be send to KAFKA and sequentially to an update step that takes MQTT based lat/lon/fuel/distance data points and updates back the lookup database via the same Spring Boot API.
 
 ![image](https://user-images.githubusercontent.com/39495790/122855343-bc8b3f80-d332-11eb-9ad1-9a8d04a2e372.png)
-
-
-
-
-
-
-
 
