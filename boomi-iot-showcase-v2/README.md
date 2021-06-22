@@ -48,7 +48,19 @@ This process serves multiple objectives. It subscribes to the MQTT broker and li
 
 Herein, the HTTP lookup data is then mashed up with incoming MQTT messages for each GPS ID to perform a typical use-case of **data enrichment**. Lastly, the overall data is profiled in a JSON structure that will be send to KAFKA and sequentially to an update step that takes MQTT based lat/lon/fuel/distance data points and updates back the lookup database via the same Spring Boot API.
 
-![image](https://user-images.githubusercontent.com/39495790/122855343-bc8b3f80-d332-11eb-9ad1-9a8d04a2e372.png)
+![image](https://user-images.githubusercontent.com/39495790/122973670-1c273080-d3af-11eb-8bc9-b5d1a6e37d48.png)
+
+## Process-3: Kafka-to-ElasticSearch
+
+This process integrates Kafka with ElasticSearch via a simple interlock. At the start a KAFKA listener consumes the messages produced to the "gps" topic by the KAFKA publisher built via the IoT processor. Since messages are received in JSON and as such do not require any sorts of transformation, they are simply relayed via a HTTP connector to the ElasticSearch engine. **NOTE** In our case, the ElasticSearch is made available via the NGINX reverse proxy due to the limitations in training account licenses. In a nutshell, the HTTP client sends the JSON data to NGINX reverse proxy that forwards it to the ElasticSearch.
+
+**ElasticSearch** being one of the most powerful indexing database allows for all sorts of further explorations, one of them being the ability to leverage indexed data into Kibana for various inferential analysis. Kibana and ElasticSearch typically go hand-in-hand and the connections between the two are established via the docker-compose directly without going through a Boomi process.
+
+![image](https://user-images.githubusercontent.com/39495790/122974487-0108f080-d3b0-11eb-8758-20cc82950095.png)
+
+## In a Nutshell..
+
+**At this stage, our real-time data is available in Kafka and ElasticSearch.** It is upon oneself if they are well versed with the possibilities to leverage these data assets into an enterprise data pipeline for other use-cases or scenarios.
 
 ## Outcomes matter
 
