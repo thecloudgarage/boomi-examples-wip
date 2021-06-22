@@ -251,3 +251,5 @@ services:
     links:
       - gpsinventory-api
       - elasticsearch
+
+# WORK-IN-PROGRESS
