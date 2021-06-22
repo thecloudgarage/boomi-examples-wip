@@ -30,7 +30,7 @@ This helped me further as my target processes that need to be tested via simulat
 
 ![image](https://user-images.githubusercontent.com/39495790/120336889-6ff2ac80-c310-11eb-8524-fac45c1a5465.png)
 
-![image](https://user-images.githubusercontent.com/39495790/122862639-1134b780-d33f-11eb-978b-eae0c97ecb97.png)
+![image](https://user-images.githubusercontent.com/39495790/122979882-b12d2800-d3b5-11eb-9042-57aadc310783.png)
 
 ## Prequisities
 * Basic working knowledge of Boomi Integration
