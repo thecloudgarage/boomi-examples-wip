@@ -42,6 +42,8 @@ This process will serve as a simulator to generate mock data for IoT sensor. The
 
 ![image](https://user-images.githubusercontent.com/39495790/122972243-8c34b700-d3ad-11eb-99ad-3b9807dd024e.png)
 
+<br />
+
 ## Process-2: IoT processor
 
 This process serves multiple objectives. It subscribes to the MQTT broker and listen for all GPS data published by the simulator processor. Further on, it performs a HTTP lookup to a Spring Boot API, wherein the intent is that there are parts of information such as customer ID, customer Name, driver details, etc. stored in a separate database. This data is accessible via a Spring Boot API. 
@@ -50,6 +52,8 @@ Herein, the HTTP lookup data is then mashed up with incoming MQTT messages for e
 
 ![image](https://user-images.githubusercontent.com/39495790/122973670-1c273080-d3af-11eb-8bc9-b5d1a6e37d48.png)
 
+<br />
+
 ## Process-3: Kafka-to-ElasticSearch
 
 This process integrates Kafka with ElasticSearch via a simple interlock. At the start a KAFKA listener consumes the messages produced to the "gps" topic by the KAFKA publisher built via the IoT processor. Since messages are received in JSON and as such do not require any sorts of transformation, they are simply relayed via a HTTP connector to the ElasticSearch engine. **NOTE** In our case, the ElasticSearch is made available via the NGINX reverse proxy due to the limitations in training account licenses. In a nutshell, the HTTP client sends the JSON data to NGINX reverse proxy that forwards it to the ElasticSearch.
@@ -57,6 +61,8 @@ This process integrates Kafka with ElasticSearch via a simple interlock. At the 
 **ElasticSearch** being one of the most powerful indexing database allows for all sorts of further explorations, one of them being the ability to leverage indexed data into Kibana for various inferential analysis. Kibana and ElasticSearch typically go hand-in-hand and the connections between the two are established via the docker-compose directly without going through a Boomi process.
 
 ![image](https://user-images.githubusercontent.com/39495790/122974487-0108f080-d3b0-11eb-8758-20cc82950095.png)
+
+<br />
 
 ## In a Nutshell..
 
