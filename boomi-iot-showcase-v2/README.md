@@ -37,7 +37,6 @@ This helped me further as my target processes that need to be tested via simulat
 * Docker host preferably with 4G or 8G RAM
 * **Optional:** Familiarity with MQTT, Kafka, ElasticSearch, Kibana, Docker
 
-<br />
 
 ## Process-1: IoT simulator
 
@@ -63,7 +62,7 @@ This process integrates Kafka with ElasticSearch via a simple interlock. At the 
 
 ![image](https://user-images.githubusercontent.com/39495790/122974487-0108f080-d3b0-11eb-8758-20cc82950095.png)
 
-<br />
+
 ## In a Nutshell..
 
 **At this stage, our real-time data is available in Kafka and ElasticSearch.** It is upon oneself if they are well versed with the possibilities to leverage these data assets into an enterprise data pipeline for other use-cases or scenarios.
