@@ -20,13 +20,14 @@ The inspiration for this project came due to a need for IOT testing tool, which 
 While that being the case, this project got all sorts of weird ideas to finally become a small end-to-end showcase. The simulator process can now be gracefully used for any kind of data set generation and diversify it's application to any target connector supported by Boomi.
 
 Boomi Integration service provides a rich featurette of connectors and integration logic inclusive of custom scripting, etc. I decided to take advantage of Boomi Integration to build a simulation tool instead of leveraging docker/linux/windows tools.
+
 This helped me further as my target processes that need to be tested via simulation were deployed on Boomi itself
 
 <br />
 
 ![image](https://user-images.githubusercontent.com/39495790/120336889-6ff2ac80-c310-11eb-8524-fac45c1a5465.png)
 
-![image](https://user-images.githubusercontent.com/39495790/120276911-f4253f80-c2d0-11eb-82c2-fdf89804ec54.png)
+![image](https://user-images.githubusercontent.com/39495790/122862639-1134b780-d33f-11eb-978b-eae0c97ecb97.png)
 
 ## Prequisities
 * Basic working knowledge of Boomi Integration
