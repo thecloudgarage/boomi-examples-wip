@@ -1,4 +1,7 @@
 # Real-time IoT data pipelines using Boomi, Docker and multiple data services.
+ [![Build Status]]
+ [![Quality Gate Status]]
+ [![BCH compliance]
 
 ## Objective
 
@@ -77,3 +80,6 @@ At the end of the exercise of creating a real-time data pipeline we will be able
 Kibana also provides for cool Machine Learning models which you can explore!
 
 ![image](https://user-images.githubusercontent.com/39495790/122866642-ec900e00-d345-11eb-9c25-5fc1a4739df8.png)
+
+## License
+Real-time IoT data pipelines using Boomi, Docker and multiple data services © 2021 by Ambar Hassani <ambar.thecloudgarage@gmail.com>
