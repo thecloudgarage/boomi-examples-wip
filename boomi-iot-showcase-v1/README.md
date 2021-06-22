@@ -4,7 +4,7 @@
 
 Build an end-to-end real-time data pipeline on top of Boomi integration that can serve as a tool-chain for various IoT use cases. 
 
-> special thanks to Chris Cappetta https://github.com/ccappetta and Premjit Mishra from Boomi who have always helped get the better of the platform!
+> special thanks to Chris Cappetta https://github.com/ccappetta and Premjit Mishra from Boomi who have always helped me get the better of the Boomi platform!
 
 
 ## Project inspiration & Boomi to the rescue!
