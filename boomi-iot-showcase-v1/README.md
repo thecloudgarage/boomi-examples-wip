@@ -44,7 +44,18 @@ This process will serve as a simulator to generate mock data for IoT sensor. The
 
 ## Process-2: IoT processor
 
-This process serves multiple objectives. It subscribes to the MQTT broker and listen for all GPS data published by the simulator processor. Further on, it performs a HTTP lookup to a Spring Boot API, wherein the intent is that there are parts of information such as customer ID, customer Name, driver details, etc. stored in a separate database. This data is accessible via a Spring Boot API. Herein, the HTTP lookup data is then mashed up with incoming MQTT messages for each GPS ID to perform a typical use-case of **data enrichment**. Lastly, the overall data is profiled in a JSON structure that will be send to KAFKA and sequentially to an update step that takes MQTT based lat/lon/fuel/distance data points and updates back the lookup database via the same Spring Boot API.
+This process serves multiple objectives. It subscribes to the MQTT broker and listen for all GPS data published by the simulator processor. Further on, it performs a HTTP lookup to a Spring Boot API, wherein the intent is that there are parts of information such as customer ID, customer Name, driver details, etc. stored in a separate database. This data is accessible via a Spring Boot API. 
+
+Herein, the HTTP lookup data is then mashed up with incoming MQTT messages for each GPS ID to perform a typical use-case of **data enrichment**. Lastly, the overall data is profiled in a JSON structure that will be send to KAFKA and sequentially to an update step that takes MQTT based lat/lon/fuel/distance data points and updates back the lookup database via the same Spring Boot API.
 
 ![image](https://user-images.githubusercontent.com/39495790/122855343-bc8b3f80-d332-11eb-9ad1-9a8d04a2e372.png)
 
+## Outcomes matter
+
+At the end of the exercise of creating a real-time data pipeline we will be able to visualize all of it in Kibana. The entirety and complexity of Kibana is huge and beyond the scope of this project. However, you will end up in visualizing and creating business intelligence views and real time maps for various data points such lat/long, fuel efficiency, distances, etc. It is upon oneself to further explore these data sets in Kibana and practically speaking you are only limited to the vast set of Kibana capabilities. 
+
+![image](https://user-images.githubusercontent.com/39495790/122866472-9e7b0a80-d345-11eb-9970-ea0d70c39aa1.png)
+
+Kibana also provides for cool Machine Learning models which you can explore!
+
+![image](https://user-images.githubusercontent.com/39495790/122866642-ec900e00-d345-11eb-9c25-5fc1a4739df8.png)
