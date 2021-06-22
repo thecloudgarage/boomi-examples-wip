@@ -1,4 +1,4 @@
-# End-to-End IoT simulation and processing using Boomi, Docker and multiple data services.
+# Real-time IoT data pipelines using Boomi, Docker and multiple data services.
 
 ## Objective
 
