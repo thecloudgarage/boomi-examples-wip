@@ -36,13 +36,13 @@ This helped me further as my target processes that need to be tested via simulat
 
 <br />
 
-## MQTT simulator process
+## Process-1: IoT simulator
 
 This process will serve as a simulator to generate mock data for IoT sensor. The process is fine tuned to generate randomness and close-to-real life emulation of incremental latitude, longitude, speeds, distances, fuel, temperature, etc. The output of this process will be sent to a MQTT broker via a connector. This how our Boomi simulator process will look like at the end.
 
 ![image](https://user-images.githubusercontent.com/39495790/122855858-7b475f80-d333-11eb-9efc-7ba2bb0bb219.png)
 
-## Data Processor process
+## Process-2: IoT processor
 
 This process serves multiple objectives. It subscribes to the MQTT broker and listen for all GPS data published by the simulator processor. Further on, it performs a HTTP lookup to a Spring Boot API, wherein the intent is that there are parts of information such as customer ID, customer Name, driver details, etc. stored in a separate database. This data is accessible via a Spring Boot API. Herein, the HTTP lookup data is then mashed up with incoming MQTT messages for each GPS ID to perform a typical use-case of **data enrichment**. Lastly, the overall data is profiled in a JSON structure that will be send to KAFKA and sequentially to an update step that takes MQTT based lat/lon/fuel/distance data points and updates back the lookup database via the same Spring Boot API.
 
