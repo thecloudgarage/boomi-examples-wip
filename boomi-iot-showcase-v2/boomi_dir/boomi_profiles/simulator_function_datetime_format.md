@@ -1,6 +1,7 @@
 ## Simulator input/output profile (data elements, data types, formats)
 
 | data element | data format option | format |
+| --------------- | --------------- | --------------- |
 | gpsterminalid | character |
 | lat | number | #.###### |
 | long | number | #.###### |
@@ -16,6 +17,7 @@
 ## Simulator Function Inputs
 
 | Input name | Input type |
+| --------------- | --------------- |
 | gpsterminalidinput | character |
 | latitudeinput | Float |
 | longitudeinput | Float |
